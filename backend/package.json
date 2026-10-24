@@ -1,0 +1,30 @@
+{
+  "name": "cheshers-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted, ad-free Cheshers multiplayer backend",
+  "engines": { "node": ">=20 <26" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "better-sqlite3": "12.4.1",
+    "chess.js": "1.4.0",
+    "cors": "2.8.6",
+    "express": "5.3.0",
+    "express-rate-limit": "8.2.1",
+    "helmet": "8.3.0",
+    "jsonwebtoken": "9.0.3",
+    "socket.io": "4.8.4",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "socket.io-client": "4.8.4",
+    "supertest": "7.1.4"
+  },
+  "license": "AGPL-3.0-or-later"
+}

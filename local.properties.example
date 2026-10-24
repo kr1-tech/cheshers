@@ -1,0 +1,10 @@
+# Copy this file to local.properties. Never commit local.properties.
+sdk.dir=/absolute/path/to/Android/Sdk
+OPENROUTER_API=
+# Optional: a fully qualified HTTPS/WSS-capable Socket.IO backend origin.
+CHESHERS_BACKEND_URL=https://your-backend.example.com
+# Optional release signing (or use environment variables in CI).
+CHESHERS_STORE_FILE=/absolute/path/to/private-cheshers.jks
+CHESHERS_STORE_PASSWORD=
+CHESHERS_KEY_ALIAS=cheshers
+CHESHERS_KEY_PASSWORD=

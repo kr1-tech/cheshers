@@ -1,0 +1,577 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "1744090bc4941a6116b76e9708064497",
+    "entities": [
+      {
+        "tableName": "games",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `active` INTEGER NOT NULL, `mode` TEXT NOT NULL, `initialFen` TEXT NOT NULL, `movesJson` TEXT NOT NULL, `pgn` TEXT NOT NULL, `whiteName` TEXT NOT NULL, `blackName` TEXT NOT NULL, `playerColor` TEXT, `difficulty` TEXT, `personality` TEXT NOT NULL, `timeControlId` TEXT NOT NULL, `whiteMs` INTEGER NOT NULL, `blackMs` INTEGER NOT NULL, `hintsRemaining` INTEGER NOT NULL, `result` TEXT NOT NULL, `resultReason` TEXT NOT NULL, `ratingDelta` INTEGER NOT NULL, `accuracy` REAL, `analysisJson` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mode",
+            "columnName": "mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "initialFen",
+            "columnName": "initialFen",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "movesJson",
+            "columnName": "movesJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pgn",
+            "columnName": "pgn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "whiteName",
+            "columnName": "whiteName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blackName",
+            "columnName": "blackName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerColor",
+            "columnName": "playerColor",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "difficulty",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "personality",
+            "columnName": "personality",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeControlId",
+            "columnName": "timeControlId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "whiteMs",
+            "columnName": "whiteMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blackMs",
+            "columnName": "blackMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hintsRemaining",
+            "columnName": "hintsRemaining",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "result",
+            "columnName": "result",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resultReason",
+            "columnName": "resultReason",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ratingDelta",
+            "columnName": "ratingDelta",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracy",
+            "columnName": "accuracy",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "analysisJson",
+            "columnName": "analysisJson",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "profile",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `username` TEXT NOT NULL, `avatarId` TEXT NOT NULL, `country` TEXT NOT NULL, `xp` INTEGER NOT NULL, `level` INTEGER NOT NULL, `coins` INTEGER NOT NULL, `wins` INTEGER NOT NULL, `losses` INTEGER NOT NULL, `draws` INTEGER NOT NULL, `gamesPlayed` INTEGER NOT NULL, `checkmates` INTEGER NOT NULL, `queenCheckmates` INTEGER NOT NULL, `puzzlesSolved` INTEGER NOT NULL, `currentWinStreak` INTEGER NOT NULL, `bestWinStreak` INTEGER NOT NULL, `dailyPuzzleStreak` INTEGER NOT NULL, `lastDailyPuzzleDay` INTEGER NOT NULL, `bulletRating` INTEGER NOT NULL, `blitzRating` INTEGER NOT NULL, `rapidRating` INTEGER NOT NULL, `classicalRating` INTEGER NOT NULL, `bulletGames` INTEGER NOT NULL, `blitzGames` INTEGER NOT NULL, `rapidGames` INTEGER NOT NULL, `classicalGames` INTEGER NOT NULL, `accuracyTotal` REAL NOT NULL, `accuracySamples` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avatarId",
+            "columnName": "avatarId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xp",
+            "columnName": "xp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coins",
+            "columnName": "coins",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wins",
+            "columnName": "wins",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "losses",
+            "columnName": "losses",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "draws",
+            "columnName": "draws",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gamesPlayed",
+            "columnName": "gamesPlayed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "checkmates",
+            "columnName": "checkmates",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "queenCheckmates",
+            "columnName": "queenCheckmates",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "puzzlesSolved",
+            "columnName": "puzzlesSolved",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentWinStreak",
+            "columnName": "currentWinStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bestWinStreak",
+            "columnName": "bestWinStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dailyPuzzleStreak",
+            "columnName": "dailyPuzzleStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastDailyPuzzleDay",
+            "columnName": "lastDailyPuzzleDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bulletRating",
+            "columnName": "bulletRating",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blitzRating",
+            "columnName": "blitzRating",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rapidRating",
+            "columnName": "rapidRating",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classicalRating",
+            "columnName": "classicalRating",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bulletGames",
+            "columnName": "bulletGames",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blitzGames",
+            "columnName": "blitzGames",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rapidGames",
+            "columnName": "rapidGames",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classicalGames",
+            "columnName": "classicalGames",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracyTotal",
+            "columnName": "accuracyTotal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accuracySamples",
+            "columnName": "accuracySamples",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "quests",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `period` TEXT NOT NULL, `metric` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `target` INTEGER NOT NULL, `progress` INTEGER NOT NULL, `rewardXp` INTEGER NOT NULL, `rewardCoins` INTEGER NOT NULL, `expiresAt` INTEGER NOT NULL, `completedAt` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "period",
+            "columnName": "period",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metric",
+            "columnName": "metric",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "target",
+            "columnName": "target",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progress",
+            "columnName": "progress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardXp",
+            "columnName": "rewardXp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rewardCoins",
+            "columnName": "rewardCoins",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "expiresAt",
+            "columnName": "expiresAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAt",
+            "columnName": "completedAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "achievements",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `target` INTEGER NOT NULL, `progress` INTEGER NOT NULL, `unlockedAt` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "target",
+            "columnName": "target",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progress",
+            "columnName": "progress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unlockedAt",
+            "columnName": "unlockedAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "cosmetics",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `type` TEXT NOT NULL, `title` TEXT NOT NULL, `cost` INTEGER NOT NULL, `unlocked` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cost",
+            "columnName": "cost",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unlocked",
+            "columnName": "unlocked",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "ai_cache",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key` TEXT NOT NULL, `content` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`key`))",
+        "fields": [
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "key"
+          ]
+        }
+      },
+      {
+        "tableName": "puzzle_results",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`puzzleId` TEXT NOT NULL, `solvedAt` INTEGER NOT NULL, `attempts` INTEGER NOT NULL, `hintsUsed` INTEGER NOT NULL, `daily` INTEGER NOT NULL, PRIMARY KEY(`puzzleId`))",
+        "fields": [
+          {
+            "fieldPath": "puzzleId",
+            "columnName": "puzzleId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "solvedAt",
+            "columnName": "solvedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attempts",
+            "columnName": "attempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hintsUsed",
+            "columnName": "hintsUsed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "daily",
+            "columnName": "daily",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "puzzleId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1744090bc4941a6116b76e9708064497')"
+    ]
+  }
+}

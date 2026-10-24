@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheshers</string>
+    <string name="app_tagline">Chess, free forever</string>
+    <string name="play">Play</string>
+    <string name="puzzles">Puzzles</string>
+    <string name="quests">Quests</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="online">Online</string>
+    <string name="analysis">Analysis</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="retry">Retry</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="free_forever">No ads. No subscriptions. No paywalls. Ever.</string>
+    <string name="notification_channel_quests">Quest reminders</string>
+    <string name="notification_channel_games">Game reminders</string>
+</resources>

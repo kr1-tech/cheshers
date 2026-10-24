@@ -1,0 +1,39 @@
+# Secrets and local machine configuration — never commit these files.
+local.properties
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+**/google-services.json
+**/firebase-service-account.json
+
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Backend
+backend/node_modules/
+backend/data/
+backend/coverage/
+npm-debug.log*
+
+# Generated deliverables
+*.apk
+*.aab
+*.aab.asc
+*.apk.idsig
+*.zip
+
+# OS / editors
+.vscode/
+*.swp
